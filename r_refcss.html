@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>受験者用リファレンス CSS編</title>
+<title>リファレンス CSS編</title>
 <link rel="stylesheet" href="../common/q_common.css">
 </head>
 
@@ -38,6 +38,7 @@
 							<li><a href="#bg_repeat">background-repeat</a></li>
 							<li><a href="#bg_position">background-position</a></li>
 							<li><a href="#bg_color">background-color</a></li>
+							<li><a href="#bg_attachment">background-attachment</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -73,6 +74,13 @@
 							<li><a href="#bd_b">border-bottom</a></li>
 							<li><a href="#bd_l">border-left</a></li>
 							<li><a href="#bd_r">border-right</a></li>
+						</ul>
+					</li>
+					<li><a href="#bd_radius">border-radius</a><ul>
+							<li><a href="#bd_t_r_radius">border-top-right-radius</a></li>
+							<li><a href="#bd_t_l_radius">border-top-left-radius</a></li>
+							<li><a href="#bd_b_r_radius">border-bottom-right-radius</a></li>
+							<li><a href="#bd_b_l_radius">border-bottom-left-radius</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -150,6 +158,7 @@
 					<li><a href="#height">height</a></li>
 					<li><a href="#min_h">min-height</a></li>
 					<li><a href="#max_h">max-height</a></li>
+					<li><a href="#b_shadow">box-shadow</a></li>
 				</ul>
 			</div>
 		</section>
@@ -158,7 +167,8 @@
 			<div class="inner">
 				<ul>
 					<li><a href="#display">display</a></li>
-					<li><a href="#overflow">overflow</a><ul>
+					<li><a href="#overflow">overflow</a>
+                        <ul>
 							<li><a href="#of_x">overflow-x</a></li>
 							<li><a href="#of_y">overflow-y</a></li>
 						</ul>
@@ -224,6 +234,7 @@
 					<li><a href="#nlot2_c">:nth-last-of-type(アルファベット値)</a></li>
 					<li><a href="#fot_c">:first-of-type</a></li>
 					<li><a href="#lot_c">:last-of-type</a></li>
+					<li><a href="#not_x">:not(X)</a></li>
 				</ul>
 			</div>
 		</section>
@@ -346,6 +357,20 @@
 					<li>rgb()/rgba()</li>
 					<li>hsl()/hsla()</li>
 					<li>transparent（透明）</li>
+				</ul>
+			</div>
+		</section>
+		<section id="bg_attachment">
+			<h3><span>background-attachment</span></h3>
+			<div class="inner">
+				<p>{background-attachment: 値;}</p>
+				<p>背景画像のスクロール方法を指定する</p>
+				<h4>値</h4>
+				<ul>
+					<li>"fixed" (viewport に固定)</li>
+					<li>"local"（element's contents に固定）</li>
+					<li>"scroll"（element 自身に固定）</li>
+                    <li><a href="https://drafts.csswg.org/css-backgrounds-3/#propdef-background-attachment" target="_blank">詳細説明（英語）</a></li>
 				</ul>
 			</div>
 		</section>
@@ -536,6 +561,52 @@
 			<div class="inner">
 				<p>{border-right: border-right-widthの値 border-right-styleの値 border-right-colorの値;}</p>
 				<p>右ボーダーに関する属性をまとめて指定する。</p>
+			</div>
+		</section>
+		<section id="bd_radius">
+			<h3><span>border-radius</span></h3>
+			<div class="inner">
+				<p>{border-radius: ;}</p>
+				<p>border の角に関する属性をまとめて指定する。</p>
+<!--
+				<p>{border-radius-top-right: ;}</p>
+				<p>右上 の角に関する属性をまとめて指定する。</p>
+				<p>{border-radius-top-left: ;}</p>
+				<p>左上 の角に関する属性をまとめて指定する。</p>
+				<p>{border-radius-bottom-right: ;}</p>
+				<p>右下 の角に関する属性をまとめて指定する。</p>
+				<p>{border-radius-bottom-left: ;}</p>
+				<p>左下 の角に関する属性をまとめて指定する。</p>
+-->
+                <p><a href="https://drafts.csswg.org/css-backgrounds-3/#propdef-border-radius" target="_blank">詳細（英語）</a></p>
+			</div>
+		</section>
+		<section id="bd_t_r_radius">
+			<h3><span>border-top-right-radius</span></h3>
+			<div class="inner">
+				<p>{border-top-right-radius: ;}</p>
+				<p>border の右上の角に関する属性を指定する。</p>
+			</div>
+		</section>
+		<section id="bd_t_l_radius">
+			<h3><span>border-top-left-radius</span></h3>
+			<div class="inner">
+				<p>{border-top-left-radius: ;}</p>
+				<p>border の左上の角に関する属性を指定する。</p>
+			</div>
+		</section>
+		<section id="bd_b_r_radius">
+			<h3><span>border-bottom-right-radius</span></h3>
+			<div class="inner">
+				<p>{border-bottom-right-radius: ;}</p>
+				<p>border の右下の角に関する属性を指定する。</p>
+			</div>
+		</section>
+		<section id="bd_b_l_radius">
+			<h3><span>border-bottom-left-radius</span></h3>
+			<div class="inner">
+				<p>{border-radius-bottom-left: ;}</p>
+				<p>border の左上の角に関する属性を指定する。</p>
 			</div>
 		</section>
 	</article>
@@ -932,6 +1003,23 @@
 					<li>数値+単位</li>
 					<li>数値＋%</li>
 					<li>none（なし）</li>
+				</ul>
+			</div>
+		</section>
+		<section id="b_shadow">
+			<h3><span>box-shadow</span></h3>
+			<div class="inner">
+				<p>{boxshadow: &lt;shadow&gt;;}</p>
+				<p>box に影をつける</p>
+				<h4>&lt;shadow&gt;</h4>
+				<ul>
+					<li>1st &lt;length&gt; (horizontal offset)</li>
+					<li>2nd &lt;length&gt; (vertical offset)</li>
+					<li>3rd &lt;length&gt; (blur radius)</li>
+                    <li>4th &lt;length&gt; (spread distance)</li>
+                    <li>&lt;color&gt;</li>
+                    <li>&quot;inset&quot;</li>
+                    <li><a href="https://drafts.csswg.org/css-backgrounds-3/#propdef-box-shadow" target="_blank">詳細</a></li>
 				</ul>
 			</div>
 		</section>
@@ -1381,6 +1469,14 @@
 				<p>連続する同じ要素のみ（ID、クラスなど含む）の最後から数えた個数の中から1番目を指定する疑似クラス。</p>
 			</div>
 		</section>
+        		<section id="not_x">
+			<h3><span>:not(x)</span></h3>
+			<div class="inner">
+				<p>X 以外のすべてを指定する。</p>
+                <p><a href="https://drafts.csswg.org/selectors-3/#negation" target="_blank">詳細（英語）</a></p>
+			</div>
+		</section>
+
 	</article>
 	<article>
 		<h2><span>単位</span></h2>
